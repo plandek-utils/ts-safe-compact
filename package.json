@@ -49,11 +49,14 @@
   "engines": {
     "node": ">=10.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
   "devDependencies": {
     "@bitjson/npm-scripts-info": "^1.0.0",
     "@types/inquirer": "^6.5.0",
     "@types/jest": "^24.0.18",
+    "@types/lodash": "^4.14.144",
     "cz-conventional-changelog": "^3.0.2",
     "gh-pages": "^2.0.1",
     "inquirer": "^7.0.0",

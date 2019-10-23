@@ -17,7 +17,33 @@ Lodash compact without removing 0
 
 ## Usage
 
-TBD.
+### `safeIsTruthy`
+
+returns true if the value is truthy or if it is 0.
+
+```typescript
+import { safeIsTruthy } from "@plandek-utils/safe-compact";
+
+safeIsTruthy(1) // => true
+safeIsTruthy(0) // => true
+safeIsTruthy("") // => false
+safeIsTruthy(null) // => false
+safeIsTruthy(undefined) // => false
+safeIsTruthy(NaN) // => false
+```
+
+### `safeCompact`
+
+returns a list with the ["safe truthy" elements](#safeIsTruthy) of the given list
+
+```typescript
+import { safeCompact } from "@plandek-utils/safe-compact";
+
+safeCompact(null) // => []
+safeCompact(undefined) // => []
+safeCompact([1, 0, NaN, Infinity, 1, null, 2, [], "", undefined, -1])
+  // => [1, 0, Infinity, 1, 2, [], -1]
+```
 
 ## Development, Commits, versioning and publishing
 
