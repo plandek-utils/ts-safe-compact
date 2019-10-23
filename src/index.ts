@@ -1,5 +1,6 @@
 import { filter, List } from "lodash";
 
+// NOTE: we are missing in the type definitions NaN, which is a falsy value that we remove but there is no type for it (it's just `number`)
 export type FalsyValues = 0 | null | undefined | false | "";
 export type SafeFalsyValues = Exclude<FalsyValues, 0>;
 
