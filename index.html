@@ -74,7 +74,7 @@
 				<a href="https://codeclimate.com/github/plandek-utils/ts-safe-compact/test_coverage"><img src="https://api.codeclimate.com/v1/badges/05e2125551579a9abbcc/test_coverage" alt="Test Coverage"></a></p>
 				<p><a href="https://plandek-utils.github.io/ts-safe-compact">TypeDoc generated docs in here</a></p>
 				<p><a href="https://github.com/plandek-utils/ts-safe-compact">Github repo here</a></p>
-				<p>Lodash compact without removing 0</p>
+				<p>utils similar to <code>compact</code>, to remove certain &quot;falsy&quot; values.</p>
 				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
 					<h2>Installation</h2>
 				</a>
@@ -82,6 +82,39 @@
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 					<h2>Usage</h2>
 				</a>
+				<a href="#codesafecompactcode" id="codesafecompactcode" style="color: inherit; text-decoration: none;">
+					<h3><code>safeCompact</code></h3>
+				</a>
+				<p>returns a list with the <a href="#safeIsTruthy">&quot;safe truthy&quot; elements</a> of the given list</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { safeCompact } <span class="hljs-keyword">from</span> <span class="hljs-string">"@plandek-utils/safe-compact"</span>;
+
+safeCompact(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; []</span>
+safeCompact(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// =&gt; []</span>
+safeCompact([<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-literal">NaN</span>, <span class="hljs-literal">Infinity</span>, <span class="hljs-number">1</span>, <span class="hljs-literal">null</span>, <span class="hljs-number">2</span>, [], <span class="hljs-string">""</span>, <span class="hljs-literal">undefined</span>, <span class="hljs-number">-1</span>])
+  <span class="hljs-comment">// =&gt; [1, 0, Infinity, 1, 2, [], -1]</span></code></pre>
+				<a href="#codefilternonescode" id="codefilternonescode" style="color: inherit; text-decoration: none;">
+					<h3><code>filterNones</code></h3>
+				</a>
+				<p>returns a list with the <code>null</code> and <code>undefined</code> elements removed</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { filterNones } <span class="hljs-keyword">from</span> <span class="hljs-string">"@plandek-utils/safe-compact"</span>;
+
+filterNones(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; []</span>
+filterNones(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// =&gt; []</span>
+filterNones([<span class="hljs-number">0</span>, <span class="hljs-literal">NaN</span>, <span class="hljs-literal">Infinity</span>, <span class="hljs-number">1</span>, <span class="hljs-literal">null</span>, <span class="hljs-number">2</span>, [], <span class="hljs-string">""</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">undefined</span>, <span class="hljs-number">-1</span>])
+  <span class="hljs-comment">// =&gt; [0, NaN, Infinity, 1, 2, [], "", false, -1]</span></code></pre>
+				<a href="#codeisnotnonecode" id="codeisnotnonecode" style="color: inherit; text-decoration: none;">
+					<h3><code>isNotNone</code></h3>
+				</a>
+				<p>returns true if the value is not <code>null</code> nor <code>undefined</code></p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { isNotNone } <span class="hljs-keyword">from</span> <span class="hljs-string">"@plandek-utils/safe-compact"</span>;
+
+isNotNone(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; false</span>
+isNotNone(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// =&gt; false</span>
+isNotNone([]) <span class="hljs-comment">// =&gt; true</span>
+isNotNone(<span class="hljs-literal">false</span>) <span class="hljs-comment">// =&gt; true</span>
+isNotNone(<span class="hljs-number">0</span>) <span class="hljs-comment">// =&gt; true</span>
+isNotNone(<span class="hljs-string">""</span>) <span class="hljs-comment">// =&gt; true</span>
+isNotNone(<span class="hljs-string">"aaa"</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
 				<a href="#codesafeistruthycode" id="codesafeistruthycode" style="color: inherit; text-decoration: none;">
 					<h3><code>safeIsTruthy</code></h3>
 				</a>
@@ -94,16 +127,6 @@ safeIsTruthy(<span class="hljs-string">""</span>) <span class="hljs-comment">// 
 safeIsTruthy(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; false</span>
 safeIsTruthy(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// =&gt; false</span>
 safeIsTruthy(<span class="hljs-literal">NaN</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
-				<a href="#codesafecompactcode" id="codesafecompactcode" style="color: inherit; text-decoration: none;">
-					<h3><code>safeCompact</code></h3>
-				</a>
-				<p>returns a list with the <a href="#safeIsTruthy">&quot;safe truthy&quot; elements</a> of the given list</p>
-				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> { safeCompact } <span class="hljs-keyword">from</span> <span class="hljs-string">"@plandek-utils/safe-compact"</span>;
-
-safeCompact(<span class="hljs-literal">null</span>) <span class="hljs-comment">// =&gt; []</span>
-safeCompact(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// =&gt; []</span>
-safeCompact([<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-literal">NaN</span>, <span class="hljs-literal">Infinity</span>, <span class="hljs-number">1</span>, <span class="hljs-literal">null</span>, <span class="hljs-number">2</span>, [], <span class="hljs-string">""</span>, <span class="hljs-literal">undefined</span>, <span class="hljs-number">-1</span>])
-  <span class="hljs-comment">// =&gt; [1, 0, Infinity, 1, 2, [], -1]</span></code></pre>
 				<a href="#development-commits-versioning-and-publishing" id="development-commits-versioning-and-publishing" style="color: inherit; text-decoration: none;">
 					<h2>Development, Commits, versioning and publishing</h2>
 				</a>
@@ -185,6 +208,12 @@ yarn publish --access public</code></pre>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#safefalsyvalues" class="tsd-kind-icon">Safe<wbr>Falsy<wbr>Values</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#filternones" class="tsd-kind-icon">filter<wbr>Nones</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#isnotnone" class="tsd-kind-icon">is<wbr>Not<wbr>None</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#safecompact" class="tsd-kind-icon">safe<wbr>Compact</a>

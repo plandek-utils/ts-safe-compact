@@ -78,6 +78,8 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#filternones" class="tsd-kind-icon">filter<wbr>Nones</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#isnotnone" class="tsd-kind-icon">is<wbr>Not<wbr>None</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#safecompact" class="tsd-kind-icon">safe<wbr>Compact</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#safeistruthy" class="tsd-kind-icon">safe<wbr>IsTruthy</a></li>
 							</ul>
@@ -93,7 +95,7 @@
 					<div class="tsd-signature tsd-kind-icon">Falsy<wbr>Values<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">0</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/plandek-utils/ts-safe-compact/blob/f998adb/src/index.ts#L3">index.ts:3</a></li>
+							<li>Defined in <a href="https://github.com/plandek-utils/ts-safe-compact/blob/2bb1dae/src/index.ts#L4">index.ts:4</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -103,13 +105,85 @@
 					<div class="tsd-signature tsd-kind-icon">Safe<wbr>Falsy<wbr>Values<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Exclude</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#falsyvalues" class="tsd-signature-type">FalsyValues</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">0</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/plandek-utils/ts-safe-compact/blob/f998adb/src/index.ts#L4">index.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/plandek-utils/ts-safe-compact/blob/2bb1dae/src/index.ts#L5">index.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="filternones" class="tsd-anchor"></a>
+					<h3>filter<wbr>Nones</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">filter<wbr>Nones&lt;T&gt;<span class="tsd-signature-symbol">(</span>list<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">List</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/plandek-utils/ts-safe-compact/blob/2bb1dae/src/index.ts#L37">index.ts:37</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>returns the list removing all <code>null</code> and <code>undefined</code></p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>list: <span class="tsd-signature-type">List</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="isnotnone" class="tsd-anchor"></a>
+					<h3>is<wbr>Not<wbr>None</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Not<wbr>None&lt;T&gt;<span class="tsd-signature-symbol">(</span>v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/plandek-utils/ts-safe-compact/blob/2bb1dae/src/index.ts#L19">index.ts:19</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>return true if the value is not <code>null</code> nor <code>undefined</code></p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>v: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
 					<a name="safecompact" class="tsd-anchor"></a>
 					<h3>safe<wbr>Compact</h3>
@@ -120,7 +194,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/plandek-utils/ts-safe-compact/blob/f998adb/src/index.ts#L18">index.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/plandek-utils/ts-safe-compact/blob/2bb1dae/src/index.ts#L27">index.ts:27</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -156,7 +230,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/plandek-utils/ts-safe-compact/blob/f998adb/src/index.ts#L10">index.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/plandek-utils/ts-safe-compact/blob/2bb1dae/src/index.ts#L11">index.ts:11</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -194,6 +268,12 @@
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#safefalsyvalues" class="tsd-kind-icon">Safe<wbr>Falsy<wbr>Values</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#filternones" class="tsd-kind-icon">filter<wbr>Nones</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#isnotnone" class="tsd-kind-icon">is<wbr>Not<wbr>None</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#safecompact" class="tsd-kind-icon">safe<wbr>Compact</a>
