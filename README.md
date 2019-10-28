@@ -9,13 +9,55 @@
 
 [Github repo here](https://github.com/plandek-utils/ts-safe-compact)
 
-Lodash compact without removing 0
+utils similar to `compact`, to remove certain "falsy" values.
 
 ## Installation
 
 `yarn add @plandek-utils/safe-compact` or `npm install @plandek-utils/safe-compact`.
 
 ## Usage
+
+### `safeCompact`
+
+returns a list with the ["safe truthy" elements](#safeIsTruthy) of the given list
+
+```typescript
+import { safeCompact } from "@plandek-utils/safe-compact";
+
+safeCompact(null) // => []
+safeCompact(undefined) // => []
+safeCompact([1, 0, NaN, Infinity, 1, null, 2, [], "", undefined, -1])
+  // => [1, 0, Infinity, 1, 2, [], -1]
+```
+
+### `filterNones`
+
+returns a list with the `null` and `undefined` elements removed
+
+```typescript
+import { filterNones } from "@plandek-utils/safe-compact";
+
+filterNones(null) // => []
+filterNones(undefined) // => []
+filterNones([0, NaN, Infinity, 1, null, 2, [], "", false, undefined, -1])
+  // => [0, NaN, Infinity, 1, 2, [], "", false, -1]
+```
+
+### `isNotNone`
+
+returns true if the value is not `null` nor `undefined`
+
+```typescript
+import { isNotNone } from "@plandek-utils/safe-compact";
+
+isNotNone(null) // => false
+isNotNone(undefined) // => false
+isNotNone([]) // => true
+isNotNone(false) // => true
+isNotNone(0) // => true
+isNotNone("") // => true
+isNotNone("aaa") // => true
+```
 
 ### `safeIsTruthy`
 
@@ -30,19 +72,6 @@ safeIsTruthy("") // => false
 safeIsTruthy(null) // => false
 safeIsTruthy(undefined) // => false
 safeIsTruthy(NaN) // => false
-```
-
-### `safeCompact`
-
-returns a list with the ["safe truthy" elements](#safeIsTruthy) of the given list
-
-```typescript
-import { safeCompact } from "@plandek-utils/safe-compact";
-
-safeCompact(null) // => []
-safeCompact(undefined) // => []
-safeCompact([1, 0, NaN, Infinity, 1, null, 2, [], "", undefined, -1])
-  // => [1, 0, Infinity, 1, 2, [], -1]
 ```
 
 ## Development, Commits, versioning and publishing
