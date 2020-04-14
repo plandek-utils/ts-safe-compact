@@ -53,20 +53,7 @@ describe("safeIsTruthy()", () => {
 
 describe("safeCompact([])", () => {
   it("removes falsey values with the exception of 0. Removes also NaN", () => {
-    const given = [
-      1,
-      0,
-      NaN,
-      Infinity,
-      1,
-      null,
-      2,
-      [],
-      "",
-      false,
-      undefined,
-      -1
-    ];
+    const given = [1, 0, NaN, Infinity, 1, null, 2, [], "", false, undefined, -1];
     const expected = [1, 0, Infinity, 1, 2, [], -1];
     expect(safeCompact(given)).toEqual(expected);
   });

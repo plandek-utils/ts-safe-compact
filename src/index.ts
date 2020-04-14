@@ -24,9 +24,7 @@ export function isNotNone<T>(v: T | null | undefined): v is T {
  * from the given list, it removes nulls, undefined, false and empty string (all falsy values except for 0)
  * @param list
  */
-export function safeCompact<T>(
-  list: List<T | null | undefined | false | ""> | null | undefined
-): T[] {
+export function safeCompact<T>(list: List<T | null | undefined | false | ""> | null | undefined): T[] {
   return filter(list, safeIsTruthy);
 }
 
@@ -34,9 +32,7 @@ export function safeCompact<T>(
  * returns the list removing all `null` and `undefined`
  * @param list
  */
-export function filterNones<T>(
-  list: List<T | null | undefined> | null | undefined
-): T[] {
+export function filterNones<T>(list: List<T | null | undefined> | null | undefined): T[] {
   return filter(list, isNotNone);
 }
 
