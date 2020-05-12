@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/plandek-utils/ts-safe-compact/compare/v1.1.1...v1.1.2) (2020-05-12)
+
+
+### Bug Fixes
+
+* target ES2017 instead of esnext for module, and ES2015 for main ([d616ba2](https://github.com/plandek-utils/ts-safe-compact/commit/d616ba239fd94f2767019cf6e8923a6703517a50))
+* **deps:** [security] bump acorn from 6.4.0 to 6.4.1 ([#67](https://github.com/plandek-utils/ts-safe-compact/issues/67)) ([864202a](https://github.com/plandek-utils/ts-safe-compact/commit/864202a2534dcc00926d1ba324b76ab217a0b32d))
+
 ### [1.1.1](https://github.com/plandek-utils/ts-safe-compact/compare/v1.1.0...v1.1.1) (2020-04-14)
 
 ## [1.1.0](https://github.com/plandek-utils/ts-safe-compact/compare/v1.0.0...v1.1.0) (2019-10-28)
