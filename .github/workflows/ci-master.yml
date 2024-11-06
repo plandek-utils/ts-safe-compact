@@ -4,7 +4,7 @@ on:
     branches: master
 
 jobs:
-  publish:
+  test_and_publish:
     runs-on: ubuntu-latest
     permissions:
       contents: read
