@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/plandek-utils/safe-compact/compare/v1.1.3...v2.0.0) (2024-11-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* replaced isUndefined with x === undefined and isNull with x === null
+
+### Features
+
+* Remove lodash dependency + updating to more modern recognition of null and undefined ([dfaf30a](https://github.com/plandek-utils/safe-compact/commit/dfaf30ad1d8a488cdf942fb0bad69d6dc01f6278))
+
 ### [1.1.3](https://github.com/plandek-utils/ts-safe-compact/compare/v1.1.2...v1.1.3) (2021-02-05)
 
 ### [1.1.2](https://github.com/plandek-utils/ts-safe-compact/compare/v1.1.1...v1.1.2) (2020-05-12)
