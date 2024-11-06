@@ -22,6 +22,5 @@ jobs:
         id: publish
         with:
           token: ${{ secrets.NPM_TOKEN }}
-          provenance: true
       - if: ${{ steps.publish.outputs.type }}
         run: echo "Version changed!"
