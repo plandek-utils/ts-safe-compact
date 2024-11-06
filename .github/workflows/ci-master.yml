@@ -1,0 +1,27 @@
+name: CI Master
+on:
+  push:
+    branches: master
+
+jobs:
+  publish:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write # allow GITHUB_TOKEN to publish packages
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npm run check
+      - run: npm run test
+      - uses: JS-DevTools/npm-publish@v3
+        id: publish
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          provenance: true
+      - if: ${{ steps.publish.outputs.type }}
+        run: echo "Version changed!"
