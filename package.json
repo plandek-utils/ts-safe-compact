@@ -21,12 +21,12 @@
   },
   "repository": {
     "type": "github",
-    "url": "https://github.com/plandek-utils/safe-compact"
+    "url": "https://github.com/plandek-utils/ts-safe-compact"
   },
   "bugs": {
-    "url": "https://github.com/plandek-utils/safe-compact/issues"
+    "url": "https://github.com/plandek-utils/ts-safe-compact/issues"
   },
-  "homepage": "https://github.com/plandek-utils/safe-compact",
+  "homepage": "https://github.com/plandek-utils/ts-safe-compact",
   "license": "MIT",
   "keywords": [],
   "devDependencies": {
