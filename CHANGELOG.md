@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/plandek-utils/ts-safe-compact/compare/v2.0.1...v2.0.2) (2025-01-22)
+
+
+### Bug Fixes
+
+* **deps:** bump vite from 5.4.11 to 5.4.14 ([#258](https://github.com/plandek-utils/ts-safe-compact/issues/258)) ([01bdec2](https://github.com/plandek-utils/ts-safe-compact/commit/01bdec22d4300133fbedea091b6619526a23f663))
+
 ### [2.0.1](https://github.com/plandek-utils/safe-compact/compare/v2.0.0...v2.0.1) (2024-11-06)
 
 ## [2.0.0](https://github.com/plandek-utils/safe-compact/compare/v1.1.3...v2.0.0) (2024-11-06)
