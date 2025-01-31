@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.3](https://github.com/plandek-utils/ts-safe-compact/compare/v2.0.0...v2.0.3) (2025-01-31)
+
+
+### Miscellaneous Chores
+
+* release 2.0.3 ([3550b52](https://github.com/plandek-utils/ts-safe-compact/commit/3550b5208e6e0bfc3466cd546daef1bf08080068))
+
 ## [2.0.0](https://github.com/plandek-utils/ts-safe-compact/compare/v1.1.3...v2.0.0) (2025-01-31)
 
 
